@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>🌤️ Weather App</h1>
+        <p>Select a city to view its weather conditions!</p>
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider round"></span>
+        </label>
+    </header>
+    <main>
+        <div class="search-section">
+            <select id="cityDropdown" class="city-dropdown">
+                <option value="null">Select a City</option>
+                <option value="Mumbai">Mumbai, IN</option>
+                <option value="Delhi">Delhi, IN</option>
+                <option value="Kolkata">Kolkata, IN</option>
+                <option value="Chennai">Chennai, IN</option>
+                <option value="Bangalore">Bangalore, IN</option>
+                <option value="Hyderabad">Hyderabad, IN</option>
+                <option value="Ahmedabad">Ahmedabad, IN</option>
+                <option value="Pune">Pune, IN</option>
+                <option value="Jaipur">Jaipur, IN</option>
+                <option value="Lucknow">Lucknow, IN</option>
+                <option value="Chandigarh">Chandigarh, IN</option>
+                <option value="Surat">Surat, IN</option>
+                <option value="Bhopal">Bhopal, IN</option>
+                <option value="Indore">Indore, IN</option>
+                <option value="Patna">Patna, IN</option>
+                <option value="Nagpur">Nagpur, IN</option>
+                <option value="Kanpur">Kanpur, IN</option>
+                <option value="Vadodara">Vadodara, IN</option>
+                <option value="Coimbatore">Coimbatore, IN</option>
+                <option value="New York">New York, US</option>
+                <option value="London">London, UK</option>
+                <option value="Tokyo">Tokyo, JP</option>
+                <option value="Sydney">Sydney, AU</option>
+                <option value="Paris">Paris, FR</option>
+                <option value="Berlin">Berlin, DE</option>
+                <option value="Moscow">Moscow, RU</option>
+                <option value="Cape Town">Cape Town, ZA</option>
+                <option value="Beijing">Beijing, CN</option>
+                <option value="Rio de Janeiro">Rio de Janeiro, BR</option>
+                <option value="Dubai">Dubai, AE</option>
+                <option value="Singapore">Singapore, SG</option>
+                <option value="Toronto">Toronto, CA</option>
+                <option value="Mexico City">Mexico City, MX</option>
+                <option value="Bangkok">Bangkok, TH</option>
+                <option value="Seoul">Seoul, KR</option>
+                <option value="Istanbul">Istanbul, TR</option>
+                <option value="Nairobi">Nairobi, KE</option>
+                <option value="Buenos Aires">Buenos Aires, AR</option>
+            </select>
+            <input type="text" id="customCityInput" placeholder="enter city name or place..." class="city-input">
+            <button id="fetchWeather" class="btn">Get Weather</button>
+        </div>
+        <section class="weather-info" id="weatherInfo">
+            <div class="weather-details">
+                <h2 id="cityName">City Name</h2>
+                <p id="description">Weather Description</p>
+                <p><span id="temperature">0</span>°C</p>
+                <p><span id="humidity">0</span>% Humidity</p>
+                <p><span id="windSpeed">0</span> km/h Winds</p>
+            </div>
+            <section class="time-section">
+                <h3 id="localTime">Date & Time</h3>
+            </section>            
+            <div class="weather-animation">
+                <img id="weatherIcon" src="" alt="Weather Icon">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Weather App by Aritra Das</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

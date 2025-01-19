@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #87ceeb, #f0f8ff);
+    color: #333;
+    text-align: center;
+}
+.header {
+    background-color: #4682b4;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.search-section {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.city-dropdown {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #4682b4;
+    border-radius: 5px;
+}
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4682b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #5a9bd6;
+}
+.weather-info {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    animation: fadeIn 1.5s;
+}
+.weather-details {
+    text-align: left;
+    font-size: 18px;
+}
+.weather-animation img {
+    width: 120px;
+    height: 120px;
+    animation: bounce 2s infinite;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4682b4;
+    color: white;
+}
+.time-section {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333;
+}
+/* Dark Mode */
+body.dark-mode {
+    background: linear-gradient(to bottom, #1c1c1c, #2c2c2c);
+    color: #ffffff;
+}
+
+.header.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.city-input.dark-mode,
+.btn.dark-mode {
+    background-color: #444444;
+    color: #ffffff;
+    border: 2px solid #555555;
+}
+
+.weather-info.dark-mode {
+    color: #ffffff;
+}
+
+footer.dark-mode {
+    background-color: #333333;
+}
+
+/* Toggle Switch */
+.switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
